@@ -135,13 +135,9 @@ function WaitlistForm({
     );
   }
 
-  const inputCls = dark
-    ? "h-11 rounded-lg border border-white/20 bg-white/10 backdrop-blur px-4 text-sm text-white placeholder:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
-    : "h-11 rounded-lg border border-gray-200 bg-white px-4 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent shadow-sm transition-all";
+  const inputCls = "h-12 w-full border border-gray-300 bg-white px-4 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all";
 
-  const selectCls = dark
-    ? "h-11 rounded-lg border border-white/20 bg-white/10 backdrop-blur px-4 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white/30 transition-all appearance-none cursor-pointer"
-    : "h-11 rounded-lg border border-gray-200 bg-white px-4 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent shadow-sm transition-all appearance-none cursor-pointer";
+  const selectCls = "h-12 w-full border border-gray-300 bg-white px-4 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all appearance-none cursor-pointer";
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full max-w-md mt-2">
