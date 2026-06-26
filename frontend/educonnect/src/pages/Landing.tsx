@@ -246,9 +246,6 @@ export default function Landing() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <Link href="/auth" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors duration-200">
-            Sign in
-          </Link>
           <a href="#hero-cta" className="h-9 px-5 text-sm font-semibold rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-all duration-200 flex items-center shadow-sm">
             Join Waitlist
           </a>
@@ -265,8 +262,6 @@ export default function Landing() {
           <a href="#smarter" onClick={() => setMobileMenuOpen(false)}>How It Works</a>
           <a href="#tutors" onClick={() => setMobileMenuOpen(false)}>For Tutors</a>
           <a href="#consultants" onClick={() => setMobileMenuOpen(false)}>For Consultants</a>
-          <hr className="border-gray-100" />
-          <Link href="/auth" className="text-indigo-600 font-semibold">Sign in →</Link>
         </div>
       )}
 
