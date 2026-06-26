@@ -263,23 +263,18 @@ export default function Landing() {
         </div>
       )}
 
-      {/* ── SECTION 1: HERO ─────────────────────────────────────── */}
       <section
         id="hero"
-        className="relative px-6 md:px-14 pt-28 pb-24 md:pt-40 md:pb-36 w-full overflow-hidden"
-        style={{ background: "radial-gradient(ellipse 80% 55% at 50% -5%, rgba(99,102,241,0.12) 0%, transparent 70%)" }}
+        className="relative px-6 md:px-14 pt-28 pb-24 md:pt-40 md:pb-36 w-full bg-white overflow-hidden"
       >
-        {/* Fine grid overlay */}
-        <div className="pointer-events-none absolute inset-0"
-          style={{ backgroundImage: "linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px)", backgroundSize: "48px 48px" }} />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           {/* Eyebrow badge */}
           <div
-            className="inline-flex items-center gap-3 rounded-full border border-indigo-500/20 bg-indigo-50/40 p-1.5 pr-4 text-xs font-semibold text-indigo-950 mb-9 shadow-[0_4px_15px_-3px_rgba(99,102,241,0.06)] hover:border-indigo-500/30 transition-all duration-300 hover:shadow-[0_4px_20px_-3px_rgba(99,102,241,0.1)] group cursor-pointer"
+            className="inline-flex items-center gap-3 border border-indigo-500 bg-indigo-50 p-1.5 pr-4 text-xs font-semibold text-black mb-9 hover:bg-indigo-100 transition-all duration-300 group cursor-pointer"
             style={{ animation: "fadeSlideDown 0.6s ease forwards" }}
           >
-            <span className="rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 px-2.5 py-1 text-[9px] font-black uppercase tracking-wider text-white shadow-sm shadow-indigo-600/25 transition-transform group-hover:scale-105">
+            <span className="bg-indigo-500 px-2.5 py-1 text-[9px] font-black uppercase tracking-wider text-white transition-transform group-hover:scale-105">
               Waitlist Live
             </span>
             <span className="flex items-center gap-2">
@@ -509,10 +504,10 @@ export default function Landing() {
           </div>
 
           <Reveal delay={300}>
-            <div className="mt-10 rounded-2xl border border-gray-100 bg-gray-50 px-8 py-6 text-center">
-              <p className="text-gray-700 font-semibold text-base md:text-lg">
+            <div className="mt-10 border border-gray-200 bg-white px-8 py-6 text-center">
+              <p className="text-black font-semibold text-base md:text-lg">
                 If it does not help,{" "}
-                <strong className="text-gray-900">you walk away having spent nothing and lost nothing.</strong>
+                <strong className="text-black font-bold">you walk away having spent nothing and lost nothing.</strong>
               </p>
             </div>
           </Reveal>
@@ -520,9 +515,7 @@ export default function Landing() {
       </section>
 
       {/* ── SECTION 5: THE STAKES ───────────────────────────────── */}
-      <section id="stakes" className="py-16 md:py-28 px-6 md:px-14 bg-gray-950 relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.04]"
-          style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+      <section id="stakes" className="py-16 md:py-28 px-6 md:px-14 bg-black relative overflow-hidden">
 
         <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
           <div>
@@ -546,7 +539,7 @@ export default function Landing() {
 
           {/* Timeline card */}
           <Reveal direction="right">
-            <div className="relative overflow-hidden rounded-xl border border-slate-800 bg-slate-900 p-8">
+            <div className="relative overflow-hidden rounded-xl border border-slate-800 bg-black p-8">
               <p className="text-xs font-bold text-slate-300 uppercase tracking-widest mb-6">The Cost of Delay</p>
               <div className="space-y-0">
                 {[
@@ -577,9 +570,6 @@ export default function Landing() {
 
       {/* ── SECTION 6: GETS SMARTER ─────────────────────────────── */}
       <section id="smarter" className="py-16 md:py-28 px-6 md:px-14 bg-white relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0"
-          style={{ backgroundImage: "linear-gradient(rgba(99,102,241,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.03) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-
         <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
           {/* Progress card */}
           <Reveal direction="left">
@@ -649,9 +639,7 @@ export default function Landing() {
       </section>
 
       {/* ── SECTION 7: FOR TUTORS ───────────────────────────────── */}
-      <section id="tutors" className="py-28 px-6 md:px-14 bg-gray-950 relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.035]"
-          style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+      <section id="tutors" className="py-28 px-6 md:px-14 bg-black relative overflow-hidden">
 
         <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-20 items-center">
           <div className="grid grid-cols-2 gap-5">
@@ -742,9 +730,7 @@ export default function Landing() {
       </section>
 
       {/* ── SECTION 9: WHAT MAKES THIS DIFFERENT ───────────────── */}
-      <section id="different" className="py-16 md:py-28 px-6 md:px-14 bg-gray-950 relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.035]"
-          style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+      <section id="different" className="py-16 md:py-28 px-6 md:px-14 bg-black relative overflow-hidden">
 
         <div className="max-w-5xl mx-auto relative z-10 text-center">
           <Reveal>

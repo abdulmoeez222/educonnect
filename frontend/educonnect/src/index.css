@@ -88,10 +88,25 @@
   --text-9xl: 8rem;
   --text-9xl--line-height: 1;
 
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --color-indigo-50: #f3e9ff;
+  --color-indigo-100: #e5d1ff;
+  --color-indigo-200: #d0b0ff;
+  --color-indigo-300: #b886ff;
+  --color-indigo-400: #a164ff;
+  --color-indigo-500: #8D51FF;
+  --color-indigo-600: #7a3ee6;
+  --color-indigo-700: #6830cc;
+  --color-indigo-800: #5726b3;
+  --color-indigo-900: #492199;
+  --color-indigo-950: #291066;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-full: 0px;
 }
 
 /* LIGHT MODE */
