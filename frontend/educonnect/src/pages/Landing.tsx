@@ -430,17 +430,17 @@ export default function Landing() {
 
           <div className="space-y-6">
             <Reveal direction="right">
-              <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-8 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="relative overflow-hidden rounded-xl border border-indigo-700 bg-indigo-600 p-8 shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-8 w-8 rounded-lg bg-slate-200 flex items-center justify-center shrink-0">
-                    <X className="h-4 w-4 text-slate-500" />
+                  <div className="h-8 w-8 rounded-lg bg-indigo-800 flex items-center justify-center shrink-0">
+                    <X className="h-4 w-4 text-white" />
                   </div>
-                  <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">The Old Way</p>
+                  <p className="text-xs font-bold text-white uppercase tracking-widest">The Old Way</p>
                 </div>
                 <ul className="space-y-4">
                   {["Pay 4–8 months upfront, no refunds", "Get assigned whoever is available", "Fixed schedule, fall behind or keep up", "Pay for subjects you never needed"].map((item) => (
-                    <li key={item} className="flex items-start gap-3.5 text-sm text-slate-600 font-medium">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400 shrink-0" />
+                    <li key={item} className="flex items-start gap-3.5 text-sm text-indigo-50 font-medium">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-indigo-300 shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -448,17 +448,17 @@ export default function Landing() {
               </div>
             </Reveal>
             <Reveal direction="right" delay={120}>
-              <div className="relative overflow-hidden rounded-xl border border-indigo-100 bg-white p-8 shadow-md hover:shadow-lg hover:border-indigo-200 transition-all duration-300">
+              <div className="relative overflow-hidden rounded-xl border border-gray-800 bg-gray-950 p-8 shadow-md hover:shadow-lg hover:border-gray-700 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-8 w-8 rounded-lg bg-indigo-50 flex items-center justify-center border border-indigo-100 shrink-0">
-                    <CheckCircle2 className="h-4 w-4 text-indigo-600" />
+                  <div className="h-8 w-8 rounded-lg bg-gray-900 flex items-center justify-center border border-gray-800 shrink-0">
+                    <CheckCircle2 className="h-4 w-4 text-indigo-400" />
                   </div>
-                  <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest">The STUTAP Way</p>
+                  <p className="text-xs font-bold text-indigo-400 uppercase tracking-widest">The STUTAP Way</p>
                 </div>
                 <ul className="space-y-4">
                   {["Browse verified tutors with real scores & reviews", "Choose who teaches you, before you book", "Book one session at a time, your schedule", "Pay only for the exact topic you need"].map((item) => (
-                    <li key={item} className="flex items-start gap-3.5 text-sm text-gray-800 font-semibold">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 text-indigo-600 shrink-0" />
+                    <li key={item} className="flex items-start gap-3.5 text-sm text-indigo-300 font-semibold">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 text-indigo-500 shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -494,15 +494,15 @@ export default function Landing() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: <Shield className="h-5 w-5 text-indigo-600" />, iconBg: "bg-indigo-50 border-indigo-100", border: "border-slate-200 hover:border-indigo-200", bg: "bg-white", title: "No Deposit Required", desc: "Nothing required upfront. Join, browse, and book your first session at zero cost." },
-              { icon: <Zap className="h-5 w-5 text-indigo-600" />, iconBg: "bg-indigo-50 border-indigo-100", border: "border-slate-200 hover:border-indigo-200", bg: "bg-white", title: "No Package Commitment", desc: "Pay per session, per topic. Never locked into a bundle you don't fully need." },
-              { icon: <CheckCircle2 className="h-5 w-5 text-indigo-600" />, iconBg: "bg-indigo-50 border-indigo-100", border: "border-slate-200 hover:border-indigo-200", bg: "bg-white", title: "Walk Away Anytime", desc: "If the session does not help, you leave having spent nothing and lost nothing." },
+              { icon: <Shield className="h-5 w-5 text-white" />, iconBg: "bg-indigo-500 border-indigo-400", border: "border-indigo-500 hover:border-indigo-400", bg: "bg-indigo-600", title: "No Deposit Required", desc: "Nothing required upfront. Join, browse, and book your first session at zero cost." },
+              { icon: <Zap className="h-5 w-5 text-white" />, iconBg: "bg-indigo-500 border-indigo-400", border: "border-indigo-500 hover:border-indigo-400", bg: "bg-indigo-600", title: "No Package Commitment", desc: "Pay per session, per topic. Never locked into a bundle you don't fully need." },
+              { icon: <CheckCircle2 className="h-5 w-5 text-white" />, iconBg: "bg-indigo-500 border-indigo-400", border: "border-indigo-500 hover:border-indigo-400", bg: "bg-indigo-600", title: "Walk Away Anytime", desc: "If the session does not help, you leave having spent nothing and lost nothing." },
             ].map((g, i) => (
               <Reveal key={g.title} delay={i * 100}>
                 <div className={`group relative rounded-xl border ${g.border} ${g.bg} p-8 h-full shadow-sm hover:shadow-md transition-all duration-300`}>
                   <div className={`h-10 w-10 rounded-lg ${g.iconBg} border flex items-center justify-center mb-6`}>{g.icon}</div>
-                  <h3 className="font-bold text-gray-900 text-base mb-3">{g.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed font-medium">{g.desc}</p>
+                  <h3 className="font-bold text-white text-base mb-3">{g.title}</h3>
+                  <p className="text-sm text-indigo-100 leading-relaxed font-medium">{g.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -546,7 +546,7 @@ export default function Landing() {
 
           {/* Timeline card */}
           <Reveal direction="right">
-            <div className="relative overflow-hidden rounded-xl border border-white/[0.1] bg-slate-900 p-8 shadow-2xl">
+            <div className="relative overflow-hidden rounded-xl border border-slate-800 bg-slate-900 p-8">
               <p className="text-xs font-bold text-slate-300 uppercase tracking-widest mb-6">The Cost of Delay</p>
               <div className="space-y-0">
                 {[
@@ -567,8 +567,8 @@ export default function Landing() {
                   </div>
                 ))}
               </div>
-              <div className="mt-2 rounded-lg bg-indigo-500/10 border border-indigo-500/20 px-5 py-4 text-center">
-                <p className="text-sm text-indigo-300 font-semibold tracking-wide">With STUTAP → get unstuck in 24 hours</p>
+              <div className="mt-4 rounded-lg bg-white px-5 py-4 text-center shadow-sm hover:shadow-md transition-shadow">
+                <p className="text-sm text-indigo-700 font-bold tracking-wide">With STUTAP → get unstuck in 24 hours</p>
               </div>
             </div>
           </Reveal>
@@ -611,12 +611,9 @@ export default function Landing() {
                   </div>
                 ))}
               </div>
-              <div className="mt-8 rounded-xl bg-indigo-50/50 border border-indigo-100/50 px-4 py-3.5 flex items-start gap-3">
-                <div className="h-6 w-6 rounded-full bg-indigo-100 flex items-center justify-center shrink-0 mt-0.5">
-                  <Star className="h-3 w-3 text-indigo-600" />
-                </div>
-                <p className="text-xs text-indigo-900 font-semibold leading-relaxed">
-                  Recommended Action: Practice Biology Cell Division with a verified tutor
+              <div className="mt-8 border-l-2 border-indigo-500 pl-4 py-2">
+                <p className="text-sm text-gray-700 font-medium leading-relaxed">
+                  <strong className="text-gray-900 font-bold">Recommended Action:</strong> Practice Biology Cell Division with a verified tutor
                 </p>
               </div>
             </div>
@@ -665,9 +662,9 @@ export default function Landing() {
               { icon: <Shield className="h-5 w-5 text-indigo-400" />, label: "Keep 100% of Earnings" },
             ].map((card, i) => (
               <Reveal key={card.label} delay={i * 80}>
-                <div className="relative overflow-hidden rounded-xl bg-slate-900 border border-slate-800 p-6 flex flex-col items-center text-center gap-4 hover:bg-slate-800 hover:border-slate-700 transition-all duration-300 h-full group">
-                  <div className="h-12 w-12 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center">{card.icon}</div>
-                  <p className="text-sm font-bold text-slate-200 tracking-wide">{card.label}</p>
+                <div className="rounded-xl border border-gray-800/60 bg-gray-900/40 p-6 flex flex-col items-start gap-3 hover:bg-gray-900/80 hover:border-gray-700 transition-colors h-full">
+                  <div className="text-indigo-400 mb-1">{card.icon}</div>
+                  <p className="text-sm font-semibold text-gray-200 tracking-wide">{card.label}</p>
                 </div>
               </Reveal>
             ))}
