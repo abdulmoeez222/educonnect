@@ -244,7 +244,7 @@ export default function UploadResource() {
                       <Input type="number" placeholder="500" className="pl-12" {...field} onChange={e => field.onChange(parseInt(e.target.value))} data-testid="input-price" />
                     </FormControl>
                   </div>
-                  <FormDescription>Creators keep 70% of each sale. EduConnect retains 30% as platform fee.</FormDescription>
+                  <FormDescription>Creators keep 70% of each sale. STUTAP retains 30% as platform fee.</FormDescription>
                   <FormMessage />
                 </FormItem>
               )} />

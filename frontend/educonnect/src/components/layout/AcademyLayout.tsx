@@ -21,7 +21,7 @@ export default function AcademyLayout({ children }: { children: React.ReactNode 
         <div className="p-4 border-b">
           <div className="flex items-center gap-2 text-primary font-bold text-lg">
             <GraduationCap className="h-5 w-5" />
-            EduConnect
+            STUTAP
           </div>
           <div className="text-xs text-muted-foreground mt-0.5 font-medium uppercase tracking-wider">Academy Portal</div>
         </div>

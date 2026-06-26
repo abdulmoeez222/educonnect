@@ -78,7 +78,7 @@ export default function AcademyBilling() {
         <CardContent className="p-5 flex items-center justify-between">
           <div>
             <p className="font-semibold text-sm">Need to modify your contract?</p>
-            <p className="text-xs text-muted-foreground mt-0.5">Contact your account manager or reach EduConnect support directly.</p>
+            <p className="text-xs text-muted-foreground mt-0.5">Contact your account manager or reach STUTAP support directly.</p>
           </div>
           <div className="flex gap-2 shrink-0">
             <Button variant="outline" size="sm">

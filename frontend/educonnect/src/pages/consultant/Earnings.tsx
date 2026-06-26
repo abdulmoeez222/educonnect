@@ -26,7 +26,7 @@ export default function ConsultantEarnings() {
 
       <div className="mt-8">
         <div className="flex items-start gap-2 p-3 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 mb-4 text-sm text-amber-800 dark:text-amber-400">
-          EduConnect retains a 12% platform commission on each session fee. Net amounts shown below are what you receive.
+          STUTAP retains a 12% platform commission on each session fee. Net amounts shown below are what you receive.
         </div>
 
         <Card>

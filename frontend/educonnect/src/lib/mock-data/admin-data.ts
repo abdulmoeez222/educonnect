@@ -128,7 +128,7 @@ export const DISPUTES: Dispute[] = [
     openedDate: 'Jun 2, 2025',
     messages: [
       { sender: 'Omar Qureshi', role: 'student', text: 'The video call dropped 4 times. We barely covered 20 minutes of content. Requesting partial refund.', time: 'Jun 2, 11:00 AM' },
-      { sender: 'EduConnect Admin', role: 'admin', text: 'We reviewed the session logs and confirmed platform instability during this time window. A 50% refund (PKR 1,000) has been issued to both parties.', time: 'Jun 3, 10:00 AM' },
+      { sender: 'STUTAP Admin', role: 'admin', text: 'We reviewed the session logs and confirmed platform instability during this time window. A 50% refund (PKR 1,000) has been issued to both parties.', time: 'Jun 3, 10:00 AM' },
     ],
   },
 ];

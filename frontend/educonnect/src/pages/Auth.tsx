@@ -27,7 +27,7 @@ export default function Auth() {
           <div className="h-8 w-8 bg-white/20 rounded-2xl flex items-center justify-center text-white p-1.5">
             <GraduationCap className="h-full w-full" />
           </div>
-          <span>EduConnect</span>
+          <span>STUTAP</span>
         </div>
         <div>
           <h1 className="text-white font-black text-4xl lg:text-5xl leading-tight mb-6">Your academic journey starts here.</h1>
@@ -54,7 +54,7 @@ export default function Auth() {
             <div className="h-8 w-8 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-2xl flex items-center justify-center text-white p-1.5">
               <GraduationCap className="h-full w-full" />
             </div>
-            <span className="font-extrabold tracking-tight">EduConnect</span>
+            <span className="font-extrabold tracking-tight">STUTAP</span>
           </div>
 
           <Card className="border-0 shadow-none sm:border sm:shadow-xl sm:rounded-3xl overflow-hidden">

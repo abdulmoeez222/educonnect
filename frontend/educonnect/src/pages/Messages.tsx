@@ -10,7 +10,7 @@ const mockThreads = [
   { id: 1, name: 'Ahmed Khan', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmed%20Khan', lastMessage: 'Great! Let\'s start with the Cell Biology past...', time: '10:42 AM', unread: 2, online: true },
   { id: 2, name: 'Sara Ali', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sara%20Ali', lastMessage: 'Can we reschedule our session to tomorrow?', time: 'Yesterday', unread: 0, online: false },
   { id: 3, name: 'Dr. Tariq Mahmood', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Tariq%20Mahmood', lastMessage: 'I have reviewed your personal statement.', time: 'Monday', unread: 0, online: true },
-  { id: 4, name: 'EduConnect Support', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Support', lastMessage: 'Your refund has been processed.', time: 'Oct 12', unread: 0, online: false },
+  { id: 4, name: 'STUTAP Support', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Support', lastMessage: 'Your refund has been processed.', time: 'Oct 12', unread: 0, online: false },
 ];
 
 export default function Messages() {

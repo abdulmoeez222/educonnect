@@ -222,7 +222,7 @@ export default function ResourceDetail() {
 
               <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                 <ShieldCheck className="h-4 w-4" />
-                <span>EduConnect Buyer Protection — full refund within 7 days</span>
+                <span>STUTAP Buyer Protection — full refund within 7 days</span>
               </div>
             </div>
 

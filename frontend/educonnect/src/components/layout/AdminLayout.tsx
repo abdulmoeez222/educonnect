@@ -18,7 +18,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div className="p-4 border-b">
           <div className="flex items-center gap-2 text-red-600 dark:text-red-400 font-bold text-lg">
             <ShieldCheck className="h-5 w-5" />
-            EduConnect
+            STUTAP
           </div>
           <div className="text-xs text-muted-foreground mt-0.5 font-medium uppercase tracking-wider">Admin Panel</div>
         </div>

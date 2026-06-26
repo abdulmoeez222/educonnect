@@ -98,7 +98,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="h-8 w-8 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-lg flex items-center justify-center text-white p-1.5">
             <GraduationCap className="h-full w-full" />
           </div>
-          <span className="font-extrabold tracking-tight text-xl">EduConnect</span>
+          <span className="font-extrabold tracking-tight text-xl">STUTAP</span>
         </div>
         
         <nav className="flex-1 py-4 flex flex-col gap-1 px-2 overflow-y-auto">
@@ -172,7 +172,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <div className="h-8 w-8 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-lg flex items-center justify-center text-white p-1.5">
                     <GraduationCap className="h-full w-full" />
                   </div>
-                  <span className="font-extrabold tracking-tight text-xl">EduConnect</span>
+                  <span className="font-extrabold tracking-tight text-xl">STUTAP</span>
                 </div>
                 <nav className="flex-1 py-4 flex flex-col gap-1 px-2 overflow-y-auto">
                   {NAV_ITEMS.map((item) => {
@@ -210,7 +210,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="h-8 w-8 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-lg flex items-center justify-center text-white p-1.5">
                 <GraduationCap className="h-full w-full" />
               </div>
-              <span className="hidden sm:inline font-extrabold tracking-tight">EduConnect</span>
+              <span className="hidden sm:inline font-extrabold tracking-tight">STUTAP</span>
             </div>
           </div>
 

@@ -204,7 +204,7 @@ export default function TutorProfile() {
           <div className="bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 rounded-xl p-4 flex items-start gap-3">
             <ShieldCheck className="h-5 w-5 text-indigo-500 shrink-0 mt-0.5" />
             <div className="text-sm">
-              <span className="font-semibold block mb-1 text-foreground">EduConnect Guarantee</span>
+              <span className="font-semibold block mb-1 text-foreground">STUTAP Guarantee</span>
               <span className="text-muted-foreground">Your payment is held securely until the session is completed successfully.</span>
             </div>
           </div>

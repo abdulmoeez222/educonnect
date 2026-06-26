@@ -53,7 +53,7 @@ export default function Onboarding() {
           <div className="h-8 w-8 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-2xl flex items-center justify-center text-white p-1.5">
             <GraduationCap className="h-full w-full" />
           </div>
-          <span>EduConnect</span>
+          <span>STUTAP</span>
         </div>
       </header>
 
@@ -77,7 +77,7 @@ export default function Onboarding() {
       <main className="flex-1 flex flex-col max-w-2xl mx-auto w-full px-6 pb-20">
         {step === 1 && (
           <div className="animate-in fade-in slide-in-from-bottom-3 duration-400">
-            <h1 className="text-3xl font-bold mb-2">Welcome! how will you use EduConnect?</h1>
+            <h1 className="text-3xl font-bold mb-2">Welcome! how will you use STUTAP?</h1>
             <p className="text-muted-foreground mb-8">Select your primary role. You can always change this later.</p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
