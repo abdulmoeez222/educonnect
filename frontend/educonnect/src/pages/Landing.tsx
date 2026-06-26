@@ -198,12 +198,6 @@ function SectionDivider({ dark = false }) {
 ═══════════════════════════════════════════════════════════════════ */
 function Eyebrow({ label, dark = false, color = "indigo" }: { label: string; dark?: boolean; color?: string }) {
   const colors: Record<string, string> = {
-    indigo: dark ? "text-indigo-400" : "text-indigo-600",
-    violet: "text-violet-400",
-    emerald: "text-emerald-600",
-    orange: "text-orange-500",
-    amber: "text-amber-600",
-    teal: "text-teal-600",
   };
   return (
     <p className={`text-xs font-bold uppercase tracking-[0.15em] mb-5 ${colors[color] ?? colors.indigo}`}>
@@ -338,8 +332,14 @@ export default function Landing() {
           {/* Social proof */}
           <div className="flex items-center justify-center gap-3" style={{ animation: "fadeSlideDown 0.6s 0.32s ease both" }}>
             <div className="flex -space-x-2.5">
-              {["🧑‍🎓", "👩‍🎓", "🧑‍💻", "👩‍🏫", "🧑‍🔬"].map((e, i) => (
-                <div key={i} className="h-9 w-9 rounded-full bg-gradient-to-br from-indigo-100 to-indigo-200 border-2 border-white flex items-center justify-center text-sm shadow-sm">{e}</div>
+              {[
+                <GraduationCap key="1" className="h-5 w-5 text-indigo-500" />,
+                <Users key="2" className="h-5 w-5 text-indigo-500" />,
+                <BookOpen key="3" className="h-5 w-5 text-indigo-500" />,
+                <Zap key="4" className="h-5 w-5 text-indigo-500" />,
+                <Shield key="5" className="h-5 w-5 text-indigo-500" />
+              ].map((icon, i) => (
+                <div key={i} className="h-9 w-9 rounded-full bg-slate-50 border-2 border-white flex items-center justify-center shadow-sm text-indigo-600">{icon}</div>
               ))}
             </div>
             <p className="text-sm text-gray-500"><strong className="text-gray-800 font-semibold">200+ students</strong> already on the waitlist</p>
@@ -435,20 +435,19 @@ export default function Landing() {
             </div>
           </div>
 
-          {/* Comparison cards */}
           <div className="space-y-6">
             <Reveal direction="right">
-              <div className="relative overflow-hidden rounded-2xl border border-rose-100 bg-white p-8 shadow-[0_8px_30px_rgb(244,63,94,0.02)] border-t-4 border-t-rose-500 hover:shadow-[0_8px_30px_rgb(244,63,94,0.04)] transition-all duration-300">
+              <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-8 shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-8 w-8 rounded-full bg-rose-50 flex items-center justify-center border border-rose-100 shrink-0">
-                    <X className="h-4 w-4 text-rose-500" />
+                  <div className="h-8 w-8 rounded-lg bg-slate-200 flex items-center justify-center shrink-0">
+                    <X className="h-4 w-4 text-slate-500" />
                   </div>
-                  <p className="text-xs font-bold text-rose-500 uppercase tracking-widest">The Old Way</p>
+                  <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">The Old Way</p>
                 </div>
                 <ul className="space-y-4">
                   {["Pay 4–8 months upfront, no refunds", "Get assigned whoever is available", "Fixed schedule, fall behind or keep up", "Pay for subjects you never needed"].map((item) => (
-                    <li key={item} className="flex items-start gap-3.5 text-sm text-gray-600 font-medium">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-rose-400 shrink-0" />
+                    <li key={item} className="flex items-start gap-3.5 text-sm text-slate-600 font-medium">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400 shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -456,9 +455,9 @@ export default function Landing() {
               </div>
             </Reveal>
             <Reveal direction="right" delay={120}>
-              <div className="relative overflow-hidden rounded-2xl border-2 border-indigo-600/10 bg-gradient-to-b from-indigo-50/20 to-white p-8 shadow-[0_12px_30px_rgb(99,102,241,0.05)] border-t-4 border-t-indigo-600 hover:shadow-[0_16px_35px_rgb(99,102,241,0.08)] hover:border-indigo-600/20 transition-all duration-300">
+              <div className="relative overflow-hidden rounded-xl border border-indigo-100 bg-white p-8 shadow-md hover:shadow-lg hover:border-indigo-200 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-8 w-8 rounded-full bg-indigo-50 flex items-center justify-center border border-indigo-100 shrink-0">
+                  <div className="h-8 w-8 rounded-lg bg-indigo-50 flex items-center justify-center border border-indigo-100 shrink-0">
                     <CheckCircle2 className="h-4 w-4 text-indigo-600" />
                   </div>
                   <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest">The STUTAP Way</p>
@@ -484,12 +483,12 @@ export default function Landing() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <Reveal>
-              <Eyebrow label="Why this costs you nothing to try" color="emerald" />
+              <Eyebrow label="Why this costs you nothing to try" color="indigo" />
             </Reveal>
             <Reveal delay={80}>
               <h2 className="text-3xl md:text-5xl font-black text-gray-950 tracking-[-0.02em] leading-tight mb-6">
                 Your First Session Is Free.{" "}
-                <span className="text-emerald-600">We Are Not Asking You To Trust Us On Faith.</span>
+                <span className="text-indigo-600">We Are Not Asking You To Trust Us On Faith.</span>
               </h2>
             </Reveal>
             <Reveal delay={160}>
@@ -502,13 +501,13 @@ export default function Landing() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: <Shield className="h-5 w-5 text-emerald-600" />, iconBg: "bg-emerald-50 border-emerald-100", border: "border-slate-100/80 hover:border-emerald-200", bg: "bg-white", title: "No Deposit Required", desc: "Nothing required upfront. Join, browse, and book your first session at zero cost." },
-              { icon: <Zap className="h-5 w-5 text-indigo-600" />, iconBg: "bg-indigo-50 border-indigo-100", border: "border-slate-100/80 hover:border-indigo-200", bg: "bg-white", title: "No Package Commitment", desc: "Pay per session, per topic. Never locked into a bundle you don't fully need." },
-              { icon: <CheckCircle2 className="h-5 w-5 text-violet-600" />, iconBg: "bg-violet-50 border-violet-100", border: "border-slate-100/80 hover:border-violet-200", bg: "bg-white", title: "Walk Away Anytime", desc: "If the session does not help, you leave having spent nothing and lost nothing." },
+              { icon: <Shield className="h-5 w-5 text-indigo-600" />, iconBg: "bg-indigo-50 border-indigo-100", border: "border-slate-200 hover:border-indigo-200", bg: "bg-white", title: "No Deposit Required", desc: "Nothing required upfront. Join, browse, and book your first session at zero cost." },
+              { icon: <Zap className="h-5 w-5 text-indigo-600" />, iconBg: "bg-indigo-50 border-indigo-100", border: "border-slate-200 hover:border-indigo-200", bg: "bg-white", title: "No Package Commitment", desc: "Pay per session, per topic. Never locked into a bundle you don't fully need." },
+              { icon: <CheckCircle2 className="h-5 w-5 text-indigo-600" />, iconBg: "bg-indigo-50 border-indigo-100", border: "border-slate-200 hover:border-indigo-200", bg: "bg-white", title: "Walk Away Anytime", desc: "If the session does not help, you leave having spent nothing and lost nothing." },
             ].map((g, i) => (
               <Reveal key={g.title} delay={i * 100}>
-                <div className={`group relative rounded-2xl border ${g.border} ${g.bg} p-8 h-full shadow-[0_8px_30px_rgb(0,0,0,0.015)] hover:shadow-[0_15px_35px_rgb(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300`}>
-                  <div className={`h-10 w-10 rounded-xl ${g.iconBg} border flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110`}>{g.icon}</div>
+                <div className={`group relative rounded-xl border ${g.border} ${g.bg} p-8 h-full shadow-sm hover:shadow-md transition-all duration-300`}>
+                  <div className={`h-10 w-10 rounded-lg ${g.iconBg} border flex items-center justify-center mb-6`}>{g.icon}</div>
                   <h3 className="font-bold text-gray-900 text-base mb-3">{g.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed font-medium">{g.desc}</p>
                 </div>
@@ -535,7 +534,7 @@ export default function Landing() {
         <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
           <div>
             <Reveal>
-              <Eyebrow label="What waiting actually costs" dark color="orange" />
+              <Eyebrow label="What waiting actually costs" dark color="indigo" />
             </Reveal>
             <Reveal delay={80}>
               <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-black text-white tracking-[-0.02em] leading-tight mb-8">
@@ -554,19 +553,19 @@ export default function Landing() {
 
           {/* Timeline card */}
           <Reveal direction="right">
-            <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-slate-900/60 p-8 backdrop-blur-md shadow-[0_24px_50px_rgba(0,0,0,0.3)]">
-              <p className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-6">The Cost of Delay</p>
+            <div className="relative overflow-hidden rounded-xl border border-white/[0.1] bg-slate-900 p-8 shadow-2xl">
+              <p className="text-xs font-bold text-slate-300 uppercase tracking-widest mb-6">The Cost of Delay</p>
               <div className="space-y-0">
                 {[
-                  { week: "Week 1", action: "Still stuck on the same topic", dot: "border-orange-500/50 bg-orange-500 shadow-orange-500/40" },
-                  { week: "Week 2", action: "Batch hasn't caught up yet", dot: "border-orange-500/50 bg-orange-500 shadow-orange-500/40" },
-                  { week: "Week 3", action: "Topic builds on itself, gap widens", dot: "border-red-500/50 bg-red-500 shadow-red-500/40" },
-                  { week: "Week 4", action: "Exam is here. No time left.", dot: "border-red-600/50 bg-red-600 shadow-red-600/40" },
+                  { week: "Week 1", action: "Still stuck on the same topic", dot: "border-indigo-400 bg-indigo-500 shadow-indigo-500/40" },
+                  { week: "Week 2", action: "Batch hasn't caught up yet", dot: "border-indigo-500 bg-indigo-600 shadow-indigo-600/40" },
+                  { week: "Week 3", action: "Topic builds on itself, gap widens", dot: "border-indigo-600 bg-indigo-700 shadow-indigo-700/40" },
+                  { week: "Week 4", action: "Exam is here. No time left.", dot: "border-indigo-700 bg-indigo-800 shadow-indigo-800/40" },
                 ].map((row, i) => (
                   <div key={row.week} className="flex items-stretch gap-4">
                     <div className="flex flex-col items-center">
-                      <div className={`h-3 w-3 rounded-full border-2 ${row.dot} shadow-[0_0_10px_3px] mt-1.5 shrink-0`} />
-                      {i < 3 && <div className="w-px flex-1 bg-gradient-to-b from-white/10 to-white/[0.03] my-1.5" />}
+                      <div className={`h-3 w-3 rounded-full border-2 ${row.dot} shadow-[0_0_10px_1px] mt-1.5 shrink-0`} />
+                      {i < 3 && <div className="w-px flex-1 bg-slate-800 my-1.5" />}
                     </div>
                     <div className="pb-6">
                       <p className="text-xs font-bold text-slate-400 mb-0.5 tracking-wider">{row.week}</p>
@@ -575,7 +574,7 @@ export default function Landing() {
                   </div>
                 ))}
               </div>
-              <div className="mt-2 rounded-xl bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border border-indigo-500/20 px-5 py-4 text-center">
+              <div className="mt-2 rounded-lg bg-indigo-500/10 border border-indigo-500/20 px-5 py-4 text-center">
                 <p className="text-sm text-indigo-300 font-semibold tracking-wide">With STUTAP → get unstuck in 24 hours</p>
               </div>
             </div>
@@ -603,10 +602,10 @@ export default function Landing() {
               </div>
               <div className="space-y-6">
                 {[
-                  { topic: "Organic Chemistry: Alkenes", pct: 82, color: "bg-emerald-500", text: "text-emerald-600" },
-                  { topic: "Physics: Magnetism", pct: 55, color: "bg-amber-500", text: "text-amber-600" },
-                  { topic: "Biology: Cell Division", pct: 31, color: "bg-red-500", text: "text-red-600" },
-                  { topic: "MDCAT Vocabulary", pct: 74, color: "bg-indigo-500", text: "text-indigo-600" },
+                  { topic: "Organic Chemistry: Alkenes", pct: 82, color: "bg-indigo-300", text: "text-indigo-600" },
+                  { topic: "Physics: Magnetism", pct: 55, color: "bg-indigo-400", text: "text-indigo-600" },
+                  { topic: "Biology: Cell Division", pct: 31, color: "bg-indigo-500", text: "text-indigo-600" },
+                  { topic: "MDCAT Vocabulary", pct: 74, color: "bg-indigo-600", text: "text-indigo-600" },
                 ].map((row) => (
                   <div key={row.topic}>
                     <div className="flex justify-between mb-2">
@@ -638,7 +637,7 @@ export default function Landing() {
             <Reveal delay={80}>
               <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-black text-gray-950 tracking-[-0.02em] leading-tight mb-6">
                 The More You Study On STUTAP, The Better It Understands Exactly{" "}
-                <span className="text-violet-600">Where You Are Stuck</span>
+                <span className="text-indigo-600">Where You Are Stuck</span>
               </h2>
             </Reveal>
             <div className="space-y-4 text-gray-500 text-base leading-relaxed">
@@ -665,17 +664,16 @@ export default function Landing() {
           style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
 
         <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-20 items-center">
-          {/* Feature grid */}
           <div className="grid grid-cols-2 gap-5">
             {[
               { icon: <TrendingUp className="h-5 w-5 text-indigo-400" />, label: "Set Your Price" },
-              { icon: <BookOpen className="h-5 w-5 text-violet-400" />, label: "Your Schedule" },
-              { icon: <Star className="h-5 w-5 text-amber-400" />, label: "Build Reviews" },
-              { icon: <Shield className="h-5 w-5 text-emerald-400" />, label: "Keep 100% of Earnings" },
+              { icon: <BookOpen className="h-5 w-5 text-indigo-400" />, label: "Your Schedule" },
+              { icon: <Star className="h-5 w-5 text-indigo-400" />, label: "Build Reviews" },
+              { icon: <Shield className="h-5 w-5 text-indigo-400" />, label: "Keep 100% of Earnings" },
             ].map((card, i) => (
               <Reveal key={card.label} delay={i * 80}>
-                <div className="relative overflow-hidden rounded-2xl bg-white/[0.03] border border-white/[0.06] p-6 flex flex-col items-center text-center gap-4 hover:bg-white/[0.08] hover:border-indigo-500/30 transition-all duration-300 h-full group hover:-translate-y-1">
-                  <div className="h-12 w-12 rounded-xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">{card.icon}</div>
+                <div className="relative overflow-hidden rounded-xl bg-slate-900 border border-slate-800 p-6 flex flex-col items-center text-center gap-4 hover:bg-slate-800 hover:border-slate-700 transition-all duration-300 h-full group">
+                  <div className="h-12 w-12 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center">{card.icon}</div>
                   <p className="text-sm font-bold text-slate-200 tracking-wide">{card.label}</p>
                 </div>
               </Reveal>
@@ -708,12 +706,12 @@ export default function Landing() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-20 items-center">
           <div>
             <Reveal>
-              <Eyebrow label="For consultants, mentors, and industry experts" color="amber" />
+              <Eyebrow label="For consultants, mentors, and industry experts" color="indigo" />
             </Reveal>
             <Reveal delay={80}>
               <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-black text-gray-950 tracking-[-0.02em] leading-tight mb-6">
                 Your Time And Your Experience Are Worth Paying For.{" "}
-                <span className="text-amber-600">Make Them Bookable.</span>
+                <span className="text-indigo-600">Make Them Bookable.</span>
               </h2>
             </Reveal>
             <div className="space-y-4 text-gray-500 text-base leading-relaxed mb-8">
@@ -727,10 +725,10 @@ export default function Landing() {
           </div>
 
           <Reveal direction="right">
-            <div className="relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-8 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] border-t-4 border-t-amber-500 hover:shadow-[0_20px_45px_-15px_rgba(0,0,0,0.08)] transition-all duration-300">
+            <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="flex items-center gap-3.5 mb-7">
-                <div className="h-10 w-10 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center">
-                  <Users className="h-5 w-5 text-amber-600" />
+                <div className="h-10 w-10 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center">
+                  <Users className="h-5 w-5 text-indigo-600" />
                 </div>
                 <p className="text-sm font-bold text-gray-900 uppercase tracking-widest">What you get on STUTAP</p>
               </div>
@@ -743,7 +741,7 @@ export default function Landing() {
                   "Choose exactly who you take sessions with",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3.5 text-sm text-gray-700 font-medium">
-                    <CheckCircle2 className="h-4.5 w-4.5 text-amber-500 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-4.5 w-4.5 text-indigo-500 shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -778,13 +776,15 @@ export default function Landing() {
 
           <div className="grid md:grid-cols-3 gap-6 text-left">
             {[
-              { icon: "🎯", title: "You Choose Tutors", desc: "See who you work with, read what others thought of them, and make the call yourself before spending a single rupee." },
-              { icon: "💳", title: "Pay Per Session", desc: "Tutoring, resources, and expert consultations are all priced per session. No packages, no forced commitments." },
-              { icon: "📖", title: "One Unified Hub", desc: "Everything you need to learn and grow is in one account, not three different apps each with their own subscription." },
+              { icon: <TrendingUp className="h-6 w-6 text-indigo-400" />, title: "You Choose Tutors", desc: "See who you work with, read what others thought of them, and make the call yourself before spending a single rupee." },
+              { icon: <Zap className="h-6 w-6 text-indigo-400" />, title: "Pay Per Session", desc: "Tutoring, resources, and expert consultations are all priced per session. No packages, no forced commitments." },
+              { icon: <BookOpen className="h-6 w-6 text-indigo-400" />, title: "One Unified Hub", desc: "Everything you need to learn and grow is in one account, not three different apps each with their own subscription." },
             ].map((card, i) => (
               <Reveal key={card.title} delay={i * 100}>
-                <div className="relative overflow-hidden rounded-2xl bg-white/[0.02] border border-white/[0.06] p-8 hover:bg-white/[0.04] hover:border-indigo-500/20 transition-all duration-300 h-full hover:-translate-y-1">
-                  <span className="text-4xl mb-6 block">{card.icon}</span>
+                <div className="relative overflow-hidden rounded-xl bg-slate-900 border border-slate-800 p-8 hover:bg-slate-800 hover:border-slate-700 transition-all duration-300 h-full">
+                  <div className="h-12 w-12 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center mb-6">
+                    {card.icon}
+                  </div>
                   <h3 className="font-bold text-white text-base mb-3 tracking-wide">{card.title}</h3>
                   <p className="text-slate-400 text-sm leading-relaxed font-medium">{card.desc}</p>
                 </div>
@@ -799,12 +799,12 @@ export default function Landing() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-20 items-center">
           <div>
             <Reveal>
-              <Eyebrow label="For parents" color="teal" />
+              <Eyebrow label="For parents" color="indigo" />
             </Reveal>
             <Reveal delay={80}>
               <h2 className="text-2xl sm:text-3xl md:text-[2.6rem] font-black text-gray-950 tracking-[-0.02em] leading-tight mb-6">
                 See What Your Child Is Actually Working On,{" "}
-                <span className="text-teal-600">Every Week</span>
+                <span className="text-indigo-600">Every Week</span>
               </h2>
             </Reveal>
             <div className="space-y-4 text-gray-500 text-base leading-relaxed">
@@ -815,24 +815,24 @@ export default function Landing() {
 
           {/* Report card */}
           <Reveal direction="right">
-            <div className="relative overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-[0_15px_45px_-15px_rgba(0,0,0,0.06)]">
-              <div className="bg-slate-50/50 border-b border-slate-100 px-7 py-5 flex items-center justify-between">
+            <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+              <div className="bg-slate-50 border-b border-slate-200 px-7 py-5 flex items-center justify-between">
                 <div>
                   <p className="text-xs font-black text-slate-800 uppercase tracking-widest">Session Summary Report</p>
                   <p className="text-[11px] text-gray-400 mt-0.5">Dispatched instantly to parent after session</p>
                 </div>
-                <span className="text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-100/50 rounded-full px-3 py-1">Student Portal</span>
+                <span className="text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 rounded-md px-3 py-1">Student Portal</span>
               </div>
               <div className="p-7 space-y-4">
                 {[
-                  { label: "Topic covered", value: "Organic Chemistry: Alkenes", color: "text-gray-900" },
-                  { label: "What improved", value: "Addition reactions now solid ✅", color: "text-emerald-700 bg-emerald-50/50 border-emerald-100/50" },
-                  { label: "Still needs work", value: "Nomenclature of complex chains", color: "text-orange-700 bg-orange-50/50 border-orange-100/50" },
-                  { label: "Next session", value: "Alkynes + practice questions", color: "text-indigo-700 bg-indigo-50/30 border-indigo-100/30" },
+                  { label: "Topic covered", value: "Organic Chemistry: Alkenes", color: "text-slate-800", bg: "bg-slate-50 border-slate-200" },
+                  { label: "What improved", value: "Addition reactions now solid", color: "text-slate-800", bg: "bg-slate-50 border-slate-200" },
+                  { label: "Still needs work", value: "Nomenclature of complex chains", color: "text-slate-800", bg: "bg-slate-50 border-slate-200" },
+                  { label: "Next session", value: "Alkynes + practice questions", color: "text-indigo-800", bg: "bg-indigo-50 border-indigo-200" },
                 ].map((row) => (
-                  <div key={row.label} className={`rounded-xl border border-slate-100/70 p-4 ${row.color && row.color.includes('bg-') ? row.color.split(' ')[1] + ' ' + row.color.split(' ')[2] : 'bg-slate-50/40'}`}>
-                    <p className="text-[10px] text-gray-400 font-bold mb-1.5 uppercase tracking-wider">{row.label}</p>
-                    <p className={`text-sm font-bold ${row.color && row.color.includes('bg-') ? row.color.split(' ')[0] : row.color}`}>{row.value}</p>
+                  <div key={row.label} className={`rounded-lg border p-4 ${row.bg}`}>
+                    <p className="text-[10px] text-slate-500 font-bold mb-1.5 uppercase tracking-wider">{row.label}</p>
+                    <p className={`text-sm font-semibold ${row.color}`}>{row.value}</p>
                   </div>
                 ))}
               </div>
@@ -919,7 +919,7 @@ export default function Landing() {
           <div className="border-t border-gray-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-xs text-gray-400">© {new Date().getFullYear()} STUTAP Pakistan. All rights reserved.</p>
             <div className="flex items-center gap-2 text-xs text-gray-400">
-              <span>🇵🇰 Built for Pakistan</span>
+              <span>Built for Pakistan</span>
               <span>·</span>
               <span>JazzCash · EasyPaisa · Cards</span>
             </div>
