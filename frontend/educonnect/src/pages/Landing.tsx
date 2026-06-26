@@ -197,10 +197,8 @@ function SectionDivider({ dark = false }) {
    EYEBROW
 ═══════════════════════════════════════════════════════════════════ */
 function Eyebrow({ label, dark = false, color = "indigo" }: { label: string; dark?: boolean; color?: string }) {
-  const colors: Record<string, string> = {
-  };
   return (
-    <p className={`text-xs font-bold uppercase tracking-[0.15em] mb-5 ${colors[color] ?? colors.indigo}`}>
+    <p className={`text-xs font-bold uppercase tracking-[0.15em] mb-5 ${dark ? "text-indigo-400" : "text-indigo-600"}`}>
       {label}
     </p>
   );
