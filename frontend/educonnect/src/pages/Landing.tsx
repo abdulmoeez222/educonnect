@@ -397,8 +397,8 @@ export default function Landing() {
               ))}
             </div>
             <Reveal delay={360}>
-              <div className="mt-10 inline-block rounded-xl border border-indigo-500/30 bg-indigo-500/10 px-6 py-4">
-                <p className="text-indigo-300 font-semibold">
+              <div className="mt-12 pl-6 border-l-2 border-indigo-500/50">
+                <p className="text-xl md:text-2xl text-white font-semibold tracking-tight">
                   STUTAP was built to fix that one decision, not the whole system.
                 </p>
               </div>
