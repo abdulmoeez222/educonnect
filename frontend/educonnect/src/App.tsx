@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "next-themes";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import NotFound from "@/pages/not-found";
 
 // Layout
@@ -284,7 +284,7 @@ function App() {
             <Router />
           </WouterRouter>
           <Toaster />
-          <Analytics />
+          <VercelAnalytics />
         </TooltipProvider>
       </QueryClientProvider>
     </ThemeProvider>
