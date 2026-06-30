@@ -1,24 +1,23 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Check, Sparkles, Star, Zap } from "lucide-react";
+import { Check, Star, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PLAN_FEATURES = {
   free: [
     'Search and browse tutors',
     'Up to 2 sessions/month',
-    'Basic messaging',
     'Resource library (free items)',
     'Basic tutor profile',
   ],
   student: [
     'Everything in Free',
     'Unlimited sessions',
-    'AI Doubt-Bot (unlimited questions)',
     'Mock tests (MDCAT, ECAT)',
-    'Adaptive flashcard engine',
-    'Weekly AI Readiness Score',
+    'Weekly readiness score',
     'Priority booking',
+    'Full resource library access',
+    'Session history & reviews',
   ],
   tutor: [
     'Everything in Free',
@@ -40,7 +39,7 @@ export default function Pricing() {
         <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Pricing Plans</p>
         <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4">Simple, transparent pricing</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Start for free. Upgrade when you're ready to unlock the full AI-powered learning experience or supercharge your tutoring business.
+          Start for free. Upgrade when you're ready to unlock unlimited sessions or supercharge your tutoring business.
         </p>
       </div>
 
@@ -98,14 +97,14 @@ export default function Pricing() {
           
           <div className="mb-6">
             <div className="flex items-center gap-2 mb-1">
-              <Sparkles className="h-5 w-5 text-primary" />
-              <h3 className="text-xl font-bold">Student AI plan</h3>
+              <Star className="h-5 w-5 text-primary" />
+              <h3 className="text-xl font-bold">Student Pro</h3>
             </div>
             <div className="flex items-end gap-1 my-4">
               <span className="text-5xl font-black tracking-tight">{billing === 'monthly' ? 'PKR 999' : 'PKR 799'}</span>
               <span className="text-lg text-muted-foreground font-normal ml-1">/mo</span>
             </div>
-            <p className="text-sm text-muted-foreground">Unlock the full power of AI for your studies.</p>
+            <p className="text-sm text-muted-foreground">Unlock unlimited learning with top tutors.</p>
           </div>
           
           <ul className="space-y-3 my-6 flex-1">

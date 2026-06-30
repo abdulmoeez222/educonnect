@@ -5,7 +5,6 @@ import {
   Home, 
   Search, 
   CalendarDays, 
-  MessageSquare, 
   BookOpen, 
   User,
   Bell,
@@ -16,11 +15,8 @@ import {
   Wallet,
   BarChart3,
   Package,
-  Sparkles,
-  Brain,
   ClipboardCheck,
-  Layers,
-  Activity
+  Activity,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { 
@@ -38,15 +34,11 @@ const STUDENT_NAV_ITEMS = [
   { name: "Home", href: "/home", icon: Home },
   { name: "Search", href: "/search", icon: Search },
   { name: "Sessions", href: "/sessions", icon: CalendarDays },
-  { name: "Messages", href: "/messages", icon: MessageSquare },
   { name: "Resources", href: "/resources", icon: BookOpen },
 ];
 
-const STUDENT_AI_NAV_ITEMS = [
-  { name: "AI Tutor", href: "/ai-chat", icon: Sparkles },
+const STUDENT_LEARNING_NAV_ITEMS = [
   { name: "Mock Tests", href: "/mock-test", icon: ClipboardCheck },
-  { name: "Flashcards", href: "/flashcards", icon: Layers },
-  { name: "Study Plan", href: "/study-plan", icon: Brain },
   { name: "Readiness", href: "/readiness", icon: Activity },
 ];
 
@@ -77,7 +69,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "Home", href: "/home", icon: Home },
     { name: "Bookings", href: "/tutor/bookings", icon: CalendarDays },
     { name: "Earnings", href: "/tutor/earnings", icon: Wallet },
-    { name: "Messages", href: "/messages", icon: MessageSquare },
+    { name: "Analytics", href: "/tutor/analytics", icon: BarChart3 },
     { name: "Profile", href: "/profile", icon: User },
   ] : role === 'consultant' ? [
     { name: "Home", href: "/home", icon: Home },
@@ -86,7 +78,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "Earnings", href: "/consultant/earnings", icon: Wallet },
     { name: "Profile", href: "/profile", icon: User },
   ] : [
-    ...STUDENT_NAV_ITEMS.slice(0, 4), 
+    ...STUDENT_NAV_ITEMS,
     { name: "Profile", href: "/profile", icon: User }
   ];
 
@@ -114,13 +106,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           {role === 'student' && (
             <>
               <div className="px-3 pt-4 pb-1">
-                <div className="bg-primary/5 rounded-md px-2 py-1 -mx-2 mb-1 flex items-center">
-                  <Sparkles className="h-3 w-3 mr-1.5 text-primary/60" />
-                  <p className="text-[10px] font-semibold uppercase tracking-widest text-sidebar-foreground/50">AI Learning</p>
-                </div>
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-sidebar-foreground/50 px-2">Learning</p>
               </div>
-              {STUDENT_AI_NAV_ITEMS.map((item) => {
-                const isActive = location === item.href;
+              {STUDENT_LEARNING_NAV_ITEMS.map((item) => {
+                const isActive = location === item.href || location.startsWith(`${item.href}/`);
                 return (
                   <Link key={item.name} href={item.href} className={`flex items-center gap-3 px-3 py-2.5 rounded-lg border-l-2 transition-all duration-150 ${isActive ? 'bg-primary text-primary-foreground font-medium border-white/30' : 'text-sidebar-foreground hover:bg-sidebar-accent border-transparent'}`}>
                     <item.icon className="h-5 w-5" />
@@ -187,13 +176,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   {role === 'student' && (
                     <>
                       <div className="px-3 pt-4 pb-1">
-                        <div className="bg-primary/5 rounded-md px-2 py-1 -mx-2 mb-1 flex items-center">
-                          <Sparkles className="h-3 w-3 mr-1.5 text-primary/60" />
-                          <p className="text-[10px] font-semibold uppercase tracking-widest text-sidebar-foreground/50">AI Learning</p>
-                        </div>
+                        <p className="text-[10px] font-semibold uppercase tracking-widest text-sidebar-foreground/50 px-2">Learning</p>
                       </div>
-                      {STUDENT_AI_NAV_ITEMS.map((item) => {
-                        const isActive = location === item.href;
+                      {STUDENT_LEARNING_NAV_ITEMS.map((item) => {
+                        const isActive = location === item.href || location.startsWith(`${item.href}/`);
                         return (
                           <Link key={item.name} href={item.href} className={`flex items-center gap-3 px-3 py-2.5 rounded-lg border-l-2 transition-all duration-150 ${isActive ? 'bg-primary text-primary-foreground font-medium border-white/30' : 'text-sidebar-foreground hover:bg-sidebar-accent border-transparent'}`}>
                             <item.icon className="h-5 w-5" />

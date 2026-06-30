@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Bell, BookOpen, MessageSquare, CreditCard, Settings2, CheckCheck } from "lucide-react";
+import { Bell, BookOpen, CreditCard, Settings2, CheckCheck } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { MOCK_NOTIFICATIONS, type Notification } from "@/lib/mock-data/notifications-data";
 
 const TYPE_CONFIG: Record<Notification['type'], { icon: React.ElementType; label: string; color: string }> = {
   booking: { icon: BookOpen, label: 'Bookings', color: 'bg-indigo-100 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400' },
-  message: { icon: MessageSquare, label: 'Messages', color: 'bg-purple-100 text-purple-600 dark:bg-purple-950/40 dark:text-purple-400' },
   payment: { icon: CreditCard, label: 'Payments', color: 'bg-green-100 text-green-600 dark:bg-green-950/40 dark:text-green-400' },
   system: { icon: Settings2, label: 'System', color: 'bg-muted text-muted-foreground' },
 };
@@ -27,7 +26,6 @@ export default function Notifications() {
   const TABS: { id: FilterType; label: string }[] = [
     { id: 'all', label: 'All' },
     { id: 'booking', label: 'Bookings' },
-    { id: 'message', label: 'Messages' },
     { id: 'payment', label: 'Payments' },
     { id: 'system', label: 'System' },
   ];

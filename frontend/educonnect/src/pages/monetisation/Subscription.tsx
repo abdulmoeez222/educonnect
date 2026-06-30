@@ -8,10 +8,10 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogD
 import { useToast } from "@/hooks/use-toast";
 
 const BILLING_HISTORY = [
-  { id: 'b-1', date: 'Jun 22, 2025', amount: 999, plan: 'Student AI Plan', status: 'paid', invoice: '#INV-2506' },
-  { id: 'b-2', date: 'May 22, 2025', amount: 999, plan: 'Student AI Plan', status: 'paid', invoice: '#INV-2505' },
-  { id: 'b-3', date: 'Apr 22, 2025', amount: 999, plan: 'Student AI Plan', status: 'paid', invoice: '#INV-2504' },
-  { id: 'b-4', date: 'Mar 22, 2025', amount: 999, plan: 'Student AI Plan', status: 'paid', invoice: '#INV-2503' },
+  { id: 'b-1', date: 'Jun 22, 2025', amount: 999, plan: 'Student Pro', status: 'paid', invoice: '#INV-2506' },
+  { id: 'b-2', date: 'May 22, 2025', amount: 999, plan: 'Student Pro', status: 'paid', invoice: '#INV-2505' },
+  { id: 'b-3', date: 'Apr 22, 2025', amount: 999, plan: 'Student Pro', status: 'paid', invoice: '#INV-2504' },
+  { id: 'b-4', date: 'Mar 22, 2025', amount: 999, plan: 'Student Pro', status: 'paid', invoice: '#INV-2503' },
 ];
 
 export default function Subscription() {
@@ -36,7 +36,7 @@ export default function Subscription() {
           <div className="flex items-start justify-between gap-4">
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <span className="font-bold text-lg">Student AI Plan</span>
+                <span className="font-bold text-lg">Student Pro</span>
                 {cancelled
                   ? <Badge variant="secondary" className="bg-amber-100 text-amber-700 dark:bg-amber-950/30 dark:text-amber-400">Cancelling</Badge>
                   : <Badge className="bg-green-100 text-green-700 dark:bg-green-950/30 dark:text-green-400 border-0 text-xs">Active</Badge>
@@ -67,7 +67,7 @@ export default function Subscription() {
           </div>
 
           <div className="mt-4 pt-4 border-t grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {['AI Doubt-Bot', 'Mock Tests', 'Flashcards', 'Study Plan', 'Readiness Score', 'Session Debriefs'].map(f => (
+            {['Unlimited sessions', 'Mock tests', 'Readiness score', 'Priority booking', 'Full resource library', 'Session history'].map(f => (
               <div key={f} className="flex items-center gap-1.5 text-xs text-muted-foreground">
                 <CheckCircle2 className="h-3.5 w-3.5 text-green-600 dark:text-green-400 shrink-0" />
                 {f}

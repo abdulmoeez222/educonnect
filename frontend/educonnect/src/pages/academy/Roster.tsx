@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, Plus, Trash2, MessageSquare, Download, ChevronDown } from "lucide-react";
+import { Search, Plus, Trash2, Download, ChevronDown } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -96,9 +96,6 @@ export default function Roster() {
       {selected.size > 0 && (
         <div className="flex items-center gap-3 mb-4 p-3 bg-primary/5 rounded-xl border border-primary/20 animate-in slide-in-from-top-2">
           <span className="text-sm font-semibold px-2">{selected.size} selected</span>
-          <Button size="sm" variant="outline" className="rounded-2xl h-8 text-xs font-semibold bg-background" onClick={() => handleBulk('Message')} data-testid="btn-bulk-message">
-            <MessageSquare className="mr-1.5 h-3.5 w-3.5" /> Message
-          </Button>
           <Button size="sm" variant="outline" className="rounded-2xl h-8 text-xs font-semibold bg-background" onClick={() => handleBulk('Export')} data-testid="btn-bulk-export">
             <Download className="mr-1.5 h-3.5 w-3.5" /> Export
           </Button>

@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { CheckCircle2, XCircle, TrendingUp, RefreshCw, ArrowLeft, MessageSquare } from "lucide-react";
+import { CheckCircle2, XCircle, TrendingUp, RefreshCw, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -174,8 +174,8 @@ export default function MockTestResults() {
           </Link>
         </Button>
         <Button variant="outline" className="flex-1 rounded-xl" asChild>
-          <Link href="/ai-chat">
-            <MessageSquare className="mr-2 h-4 w-4" /> Ask AI to explain mistakes
+          <Link href="/readiness">
+            <TrendingUp className="mr-2 h-4 w-4" /> View Readiness Score
           </Link>
         </Button>
       </div>

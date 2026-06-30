@@ -13,14 +13,13 @@ type Tab = 'profile' | 'security' | 'notifications';
 const NOTIFICATION_PREFS = [
   { key: 'booking_email', label: 'Session confirmations', category: 'Bookings', channels: ['email', 'push', 'sms'] },
   { key: 'booking_reminder', label: 'Session reminders (1 hour before)', category: 'Bookings', channels: ['email', 'push', 'sms'] },
-  { key: 'message_push', label: 'New messages', category: 'Messages', channels: ['email', 'push'] },
   { key: 'payment_email', label: 'Payment receipts', category: 'Payments', channels: ['email'] },
   { key: 'payment_push', label: 'Payment alerts', category: 'Payments', channels: ['push', 'sms'] },
   { key: 'system_push', label: 'Platform updates & new features', category: 'System', channels: ['email', 'push'] },
-  { key: 'readiness_push', label: 'Weekly AI readiness score', category: 'System', channels: ['email', 'push'] },
+  { key: 'readiness_push', label: 'Weekly readiness score', category: 'System', channels: ['email', 'push'] },
 ];
 
-const CATEGORIES = ['Bookings', 'Messages', 'Payments', 'System'];
+const CATEGORIES = ['Bookings', 'Payments', 'System'];
 
 type Channel = 'email' | 'push' | 'sms';
 

@@ -192,11 +192,8 @@ export default function TutorProfile() {
                 </div>
               </div>
 
-              <Button className="h-12 w-full rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-base font-semibold shadow-sm hover:shadow-md transition-all mb-3" asChild>
+              <Button className="h-12 w-full rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-base font-semibold shadow-sm hover:shadow-md transition-all" asChild>
                 <Link href={`/book/${tutor.id}`}>Book a Session</Link>
-              </Button>
-              <Button variant="outline" className="h-12 w-full rounded-xl border-2 text-base font-semibold">
-                Message Tutor
               </Button>
             </CardContent>
           </Card>

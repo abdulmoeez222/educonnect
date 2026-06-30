@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { TrendingUp, Info, ArrowLeft, Sparkles, Clock, MessageSquare } from "lucide-react";
+import { TrendingUp, Info, ArrowLeft, Sparkles, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -168,16 +168,6 @@ export default function Readiness() {
         <Button className="flex-1" asChild>
           <Link href="/mock-test">
             <Sparkles className="mr-2 h-4 w-4" /> Take a Mock Test
-          </Link>
-        </Button>
-        <Button variant="outline" className="flex-1" asChild>
-          <Link href="/study-plan">
-            <Info className="mr-2 h-4 w-4" /> View Study Plan
-          </Link>
-        </Button>
-        <Button variant="outline" className="flex-1" asChild>
-          <Link href="/ai-chat">
-            <MessageSquare className="mr-2 h-4 w-4" /> Ask AI for guidance
           </Link>
         </Button>
       </div>

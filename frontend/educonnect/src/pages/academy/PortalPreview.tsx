@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Eye, GraduationCap, BookOpen, CalendarDays, MessageSquare, Home } from "lucide-react";
+import { Eye, GraduationCap, BookOpen, CalendarDays, Home } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -24,7 +24,6 @@ export default function PortalPreview() {
     { icon: Home, label: 'Home' },
     { icon: BookOpen, label: 'My Subjects' },
     { icon: CalendarDays, label: 'Sessions' },
-    { icon: MessageSquare, label: 'Messages' },
   ];
 
   return (
@@ -116,10 +115,10 @@ export default function PortalPreview() {
               <p className="text-xs text-muted-foreground mb-1">Welcome back</p>
               <p className="font-bold text-base">Hamza Khan</p>
             </div>
-            <div className="grid grid-cols-3 gap-2">
-              {['Sessions', 'Subjects', 'Messages'].map((label, i) => (
+            <div className="grid grid-cols-2 gap-2">
+              {['Sessions', 'Subjects'].map((label, i) => (
                 <div key={label} className="rounded-2xl p-3 text-center border" style={{ borderColor: accent + '30', backgroundColor: accent + '08' }}>
-                  <p className="text-lg font-bold" style={{ color: accent }}>{[8, 4, 2][i]}</p>
+                  <p className="text-lg font-bold" style={{ color: accent }}>{[8, 4][i]}</p>
                   <p className="text-[10px] text-muted-foreground">{label}</p>
                 </div>
               ))}

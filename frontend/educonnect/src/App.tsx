@@ -21,7 +21,6 @@ import TutorProfile from "@/pages/TutorProfile";
 import Booking from "@/pages/Booking";
 import Sessions from "@/pages/Sessions";
 import ActiveSession from "@/pages/ActiveSession";
-import Messages from "@/pages/Messages";
 
 // Tutor Pages
 import ProfileBuilder from "@/pages/tutor/ProfileBuilder";
@@ -40,13 +39,9 @@ import ResourceDetail from "@/pages/resources/ResourceDetail";
 import MyResources from "@/pages/resources/MyResources";
 import ResourceBundlePage from "@/pages/resources/ResourceBundle";
 
-// AI Pages
-import DoubtBot from "@/pages/ai/DoubtBot";
-import SessionDebrief from "@/pages/ai/SessionDebrief";
+// Learning Pages
 import MockTest from "@/pages/ai/MockTest";
 import MockTestResults from "@/pages/ai/MockTestResults";
-import Flashcards from "@/pages/ai/Flashcards";
-import StudyPlan from "@/pages/ai/StudyPlan";
 import Readiness from "@/pages/ai/Readiness";
 
 // Consultation Pages (client-side)
@@ -142,32 +137,16 @@ function Router() {
       <Route path="/session/:id/active">
         <Layout><ActiveSession /></Layout>
       </Route>
-      <Route path="/session/:id/debrief">
-        <Layout><SessionDebrief /></Layout>
-      </Route>
 
-      {/* AI Features */}
-      <Route path="/ai-chat">
-        <Layout><DoubtBot /></Layout>
-      </Route>
+      {/* Learning */}
       <Route path="/mock-test/results">
         <Layout><MockTestResults /></Layout>
       </Route>
       <Route path="/mock-test">
         <Layout><MockTest /></Layout>
       </Route>
-      <Route path="/flashcards">
-        <Layout><Flashcards /></Layout>
-      </Route>
-      <Route path="/study-plan">
-        <Layout><StudyPlan /></Layout>
-      </Route>
       <Route path="/readiness">
         <Layout><Readiness /></Layout>
-      </Route>
-
-      <Route path="/messages">
-        <Layout><Messages /></Layout>
       </Route>
 
       {/* Resources */}
